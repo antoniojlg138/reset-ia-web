@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RESET IA - Evaluación de Estrés</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header fade-in-down">
+        <div class="logo-circle">R</div>
+        <div>
+            <h1>RESET IA</h1>
+            <p class="subtitle">Evaluación breve de estrés y Recomendación RESET personalizada</p>
+        </div>
+    </header>
+
+    <!-- Hero con video de fondo -->
+    <section class="hero fade-in-up">
+        <div class="hero-bg-video">
+            <!-- Este video debe existir en /videos/hero_mike.mp4 -->
+            <video autoplay muted loop playsinline>
+                <source src="videos/hero_mike.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Tomar una pausa inteligente también es productividad</h2>
+                <p>
+                    En menos de 2 minutos identificamos tu nivel de estrés actual y te mostramos
+                    un ejercicio RESET guiado con Lía o Mike, adaptado a cómo te sientes.
+                </p>
+                <button id="btnIrTest" class="btn-principal hero-btn">
+                    Iniciar evaluación
+                </button>
+            </div>
+            <div class="hero-badge">
+                <span>Tiempo estimado</span>
+                <strong>2 min</strong>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- Bloque de instrucciones -->
+        <section class="card fade-in-up delay-1">
+            <h2>¿Cómo funciona?</h2>
+            <ol>
+                <li>Elija con quién desea realizar su ejercicio RESET.</li>
+                <li>Responda las 7 preguntas de forma sincera.</li>
+                <li>Pulse el botón <strong>“Ver mi recomendación”</strong>.</li>
+                <li>Se reproducirá el ejercicio RESET sugerido para su nivel de estrés.</li>
+            </ol>
+        </section>
+
+        <!-- TEST -->
+        <section id="seccionTest" class="card fade-in-up delay-2">
+            <h2>Evaluación de estrés</h2>
+
+            <!-- Elección de personaje -->
+            <div class="pregunta">
+                <p>Antes de iniciar, elija con quién desea realizar su ejercicio RESET:</p>
+                <label><input type="radio" name="persona" value="lia" required> Lía</label>
+                <label><input type="radio" name="persona" value="mike"> Mike</label>
+            </div>
+
+            <form id="formTest">
+                <!-- Pregunta 1 -->
+                <div class="pregunta">
+                    <p>1. En las últimas horas, ¿qué tan tenso(a) se ha sentido físicamente?</p>
+                    <label><input type="radio" name="p1" value="0" required> Nada</label>
+                    <label><input type="radio" name="p1" value="1"> Poco</label>
+                    <label><input type="radio" name="p1" value="2"> Moderado</label>
+                    <label><input type="radio" name="p1" value="3"> Intenso</label>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="pregunta">
+                    <p>2. ¿Qué tanto le cuesta concentrarse en su trabajo?</p>
+                    <label><input type="radio" name="p2" value="0" required> Nada</label>
+                    <label><input type="radio" name="p2" value="1"> Poco</label>
+                    <label><input type="radio" name="p2" value="2"> Moderado</label>
+                    <label><input type="radio" name="p2" value="3"> Mucho</label>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="pregunta">
+                    <p>3. ¿Ha sentido irritabilidad o cambios de ánimo recientes?</p>
+                    <label><input type="radio" name="p3" value="0" required> No</label>
+                    <label><input type="radio" name="p3" value="1"> Leve</label>
+                    <label><input type="radio" name="p3" value="2"> Moderado</label>
+                    <label><input type="radio" name="p3" value="3"> Intenso</label>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="pregunta">
+                    <p>4. ¿Qué tan cansado(a) se siente físicamente?</p>
+                    <label><input type="radio" name="p4" value="0" required> Nada</label>
+                    <label><input type="radio" name="p4" value="1"> Poco</label>
+                    <label><input type="radio" name="p4" value="2"> Moderado</label>
+                    <label><input type="radio" name="p4" value="3"> Mucho</label>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="pregunta">
+                    <p>5. ¿Ha tenido molestias en cuello, espalda u hombros?</p>
+                    <label><input type="radio" name="p5" value="0" required> No</label>
+                    <label><input type="radio" name="p5" value="1"> Leve</label>
+                    <label><input type="radio" name="p5" value="2"> Moderado</label>
+                    <label><input type="radio" name="p5" value="3"> Intenso</label>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="pregunta">
+                    <p>6. ¿Qué tan acelerados siente sus pensamientos?</p>
+                    <label><input type="radio" name="p6" value="0" required> Tranquilos</label>
+                    <label><input type="radio" name="p6" value="1"> Un poco acelerados</label>
+                    <label><input type="radio" name="p6" value="2"> Bastante acelerados</label>
+                    <label><input type="radio" name="p6" value="3"> Muy acelerados</label>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="pregunta">
+                    <p>7. En general, ¿cómo calificaría su nivel de estrés actual?</p>
+                    <label><input type="radio" name="p7" value="0" required> Muy bajo</label>
+                    <label><input type="radio" name="p7" value="1"> Bajo</label>
+                    <label><input type="radio" name="p7" value="2"> Medio</label>
+                    <label><input type="radio" name="p7" value="3"> Alto</label>
+                </div>
+
+                <button type="submit" class="btn-principal full-width">
+                    Ver mi recomendación
+                </button>
+            </form>
+        </section>
+
+        <!-- RESULTADO -->
+        <section id="resultado" class="card resultado">
+            <h2 id="tituloResultado">Tu Recomendación RESET</h2>
+            <p id="descripcionResultado"></p>
+
+            <video id="videoPausa" controls class="video">
+                <source id="videoSource" src="" type="video/mp4">
+                Su navegador no soporta video.
+            </video>
+
+            <div class="acciones-resultado">
+                <button id="btnReiniciar" class="btn-secundario">
+                    Terminé · Reiniciar evaluación
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>RESET IA · Recomendaciones RESET para bienestar</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
